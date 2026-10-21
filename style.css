@@ -1,0 +1,829 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --green: #12382F;
+    --green-light: #244A3E;
+    --cream: #F5F0E4;
+    --gold: #D8C89A;
+    --muted: #C8D6CE;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--green);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.visitor-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 7% 28px;
+}
+
+.top-bar, 
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.top-bar p,
+.bottom-bar {
+    margin: 0;
+}
+
+.visitor-content {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: 0px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 7vw, 52px);
+    font-weight: 500;
+    text-align: center;
+}
+
+h1 span {
+    color: var(--gold);
+}
+
+.description {
+    margin-bottom: 40px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+input, 
+select {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px;
+    border: 1px solid #557064;
+    border-radius: 6px;
+    background: var(--cream);
+    color: #263c33;
+    font: inherit;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;   
+}
+
+button {
+    width: 100%;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    background: var(--gold);
+    color: var(--green);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--cream);
+}
+
+.privacy-note {
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+    font-style: italic;
+}
+
+.bottom-bar {
+    justify-content: center;
+    text-align: center;
+    font-size: 9px;
+}
+
+.brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.brand-logo img {
+    display: block;
+    width: 200px;
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 480px) {
+    .visitor-page{
+        min-height: 100vh;
+        padding: 12px 24px 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .visitor-content {
+        width: 100%;
+        max-width: 460px;
+        margin: 0 auto;
+        padding: 0;
+        position: static;
+    }
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    .brand-logo img {
+        display: block;
+        width: 145px;
+        max-width: 70%;
+        height: auto;
+    }
+    h1 {
+        font-size: 36px;
+        margin: 16px 0 12px;
+    }
+    .description {
+        margin-bottom: 32px;
+    }
+    
+    input, 
+    select {
+        width: 100%;
+        min-height: 50px;
+    }
+    
+    button {
+        width: 100%;
+        min-height: 52px;
+    }
+
+    .bottom-bar {
+        margin-top: 40px;
+        font-size: 9px;
+    }
+}
+
+
+/* Welcome page */
+.welcome-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 24px;
+    background: var(--green);
+}
+
+.welcome-content {
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+}
+
+.welcome-content .brand-logo {
+    margin: 0 auto 24px;
+}
+
+.welcome-content .brand-logo img {
+    width: 160px;
+    max-width: 65%;
+}
+
+.welcome-content .eyebrow {
+    margin-bottom: 20px;
+}
+
+.welcome-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 9vw, 46px);
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0 0 18px;
+}
+
+.welcome-content h1 span {
+    color: var(--gold);
+}
+
+.tagline {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.divider {
+    width: 55px;
+    height: 1px;
+    margin: 28px auto;
+    background: var(--gold);
+}
+
+.welcome-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.bottom-note {
+    margin-top: 18px;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    .welcome-page {
+        min-height: 100vh;
+        padding: 12px 24px 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .welcome-content {
+        width: 100%;
+        max-width: 460px;
+        margin: 0 auto;
+        padding: 0;
+        position: static;
+    }
+
+    .welcome-content .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    .welcome-content .brand-logo img {
+        display: block;
+        width: 145px;
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+
+/* Mahjong Challenge */
+.quiz-page {
+    min-height: 100vh;
+    background: var(--green);
+    padding: 20px 24px 32px;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.quiz-header p {
+    margin: 0;
+}
+
+.quiz-content {
+    width: 100%;
+    max-width: 460px;
+    margin: 45px auto 0;
+}
+
+.quiz-content .eyebrow {
+    margin-bottom: 16px;
+}
+
+.quiz-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 500;
+    text-align: left;
+    margin: 0 0 16px;
+}
+
+.quiz-content h1 span {
+    color: var(--gold);
+}
+
+.quiz-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.quiz-progress {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.progress-track {
+    height: 3px;
+    background: var(--green-light);
+    margin-bottom: 28px;
+}
+
+.progress-fill {
+    width: 33.333%;
+    height: 100%;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.question-card {
+    padding: 24px 18px;
+    border: 1px solid #557064;
+    border-radius: 8px;
+}
+
+.question-category {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0 0 18px;
+}
+
+.question-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0 0 24px;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-option {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px;
+    border: 1px solid #557064;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--cream);
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 0;
+}
+
+.answer-option.selected {
+    border-color: var(--gold);
+    background: var(--green-light);
+}
+
+.quiz-feedback {
+    min-height: 24px;
+    color: var(--gold);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 18px 0 8px;
+}
+
+#check-answer-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.quiz-footer {
+    margin-top: 28px;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1.3px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .quiz-content {
+        margin-top: 32px;
+    }
+
+    .quiz-content h1 {
+        font-size: 38px;
+    }
+
+    .question-card {
+        padding: 22px 16px;
+    }
+}
+
+.answer-option {
+    min-height: 120px;
+    padding: 16px;
+}
+
+.answer-label {
+    flex-shrink: 0;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.answer-tiles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.mahjong-tile {
+    width: 100px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.tile-missing {
+    width: 100px;
+    height: 85px;
+    font-size: 9px;
+    overflow-wrap: anywhere;
+}
+
+.quiz-feedback.correct {
+    color: #8FD3A8;
+}
+
+.quiz-feedback.incorrect {
+    color: #E99A91;
+}
+
+
+@media (max-width: 480px) {
+    .mahjong-tile {
+        width: 58px;
+        height: 80px;
+    }
+
+    .answer-option {
+        min-height: 120px;
+        padding: 16px 12px;
+        gap: 12px;
+    }
+
+    .answer-tiles {
+        gap: 5px;
+    }
+}
+
+
+/* Invitation Page */
+
+.invitation-page {
+    min-height: 100vh;
+    background: var(--green);
+    color: var(--cream);
+    padding: 48px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation-content {
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+}
+
+.invitation-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 16px 0;
+}
+
+.invitation-content h1 span {
+    color: var(--gold);
+}
+
+.invitation-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 42px;
+}
+
+.envelope-wrapper {
+    width: 280px;
+    height: 200px;
+    margin: 0 auto 32px;
+    perspective: 1000px;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #244A3E;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+}
+
+.envelope-flap {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 139px solid transparent;
+    border-right: 139px solid transparent;
+    border-top: 105px solid var(--gold);
+    transform-origin: top;
+    transition: transform 0.7s ease;
+}
+
+.invitation-paper {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    right: 10px;
+    bottom: 8px;
+    height: 175px;
+    background: var(--cream);
+    color: var(--green);
+    padding: 24px 12px;
+    box-sizing: border-box;
+    transition: transform 0.9s ease 0.3s;
+}
+
+.paper-small {
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.invitation-paper h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 12px 0 0;
+}
+
+.paper-subtitle {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 4px;
+}
+
+.paper-divider {
+    width: 45px;
+    height: 1px;
+    background: #B7A36F;
+    margin: 12px auto;
+}
+
+.paper-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 6px;
+    font-style: italic;
+}
+
+.envelope.opened .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope.opened .invitation-paper {
+    transform: translateY(-115px);
+}
+
+#open-invitation {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 16px;
+    border: 1px solid var(--gold);
+    background: var(--gold);
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+
+#open-invitation:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.invitation-footer {
+    margin-top: 30px;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    .invitation-content h1 {
+        font-size: 34px;
+    }
+
+    .envelope-wrapper {
+        width: 260px;
+        height: 185px;
+    }
+
+    .envelope-flap {
+        border-left-width: 129px;
+        border-right-width: 129px;
+        border-top-width: 95px;
+    }
+
+    .invitation-paper {
+        height: 165px;
+    }
+}
+
+
+/* Event Details */
+
+.event-details {
+    width: 100%;
+    max-width: 360px;
+    margin: 70px auto 0;
+    padding: 32px 24px;
+    border: 1px solid #557064;
+    border-radius: 6px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    box-sizing: border-box;
+}
+
+.event-details.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.event-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 12px 0 8px;
+}
+
+.event-name {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.event-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 24px auto;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.event-info span {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.event-info p {
+    color: var(--cream);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 8px 0 0;
+}
+
+.event-promo {
+    margin-top: 32px;
+    padding: 20px 12px;
+    background: var(--green-light);
+    border: 1px solid #557064;
+}
+
+.promo-heading {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    margin: 0 0 18px;
+}
+
+.promo-price {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.promo-price p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.promo-price strong {
+    display: block;
+    color: var(--cream);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.promo-price span {
+    display: block;
+    margin-top: 4px;
+    font-size: 10px;
+}
+
+.event-note {
+    margin-top: 24px;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+.event-details .invitation-footer {
+    margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+    .event-details {
+        padding: 28px 18px;
+    }
+
+    .event-details h2 {
+        font-size: 29px;
+    }
+}
+
+

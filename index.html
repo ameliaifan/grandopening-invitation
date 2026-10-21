@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The Crowd Mahjong Club</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="visitor-page">
+      <!-- <header class="top-bar">
+        <p>THE CROWD</p>
+        <p>MAHJONG CLUB</p>
+      </header> -->
+
+      <section class="visitor-content">
+        <div class="brand-logo">
+          <img src="assets/TCMC Logo.png" alt="The Crowd Mahjong Club" />
+        </div>
+
+        <h1>Before we begin<span>.</span></h1>
+
+        <p class="description">Kenalan sebentar, yuk!</p>
+
+        <form id="visitor-form">
+          <div class="form-group">
+            <label for="visitor-name">Nama kamu</label>
+            <input
+              type="text"
+              id="visitor-name"
+              name="name"
+              placeholder="Masukkan nama kamu"
+              required
+              maxlength="100"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="visitor-source">
+              Kamu tahu The Crowd dari siapa?
+            </label>
+
+            <input
+              type="text"
+              id="visitor-source"
+              name="name"
+              placeholder="Masukkan nama Kenalan"
+              required
+              maxlength="100"
+            />
+          </div>
+
+          <button type="submit" id="continue-button">
+            LANJUTKAN <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p class="privacy-note">
+          Informasi ini digunakan untuk mengetahui bagaimana kamu mengenal The
+          Crowd.
+        </p>
+      </section>
+
+      <footer class="bottom-bar">COME FOR THE GAME, STAY FOR THE CROWD.</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

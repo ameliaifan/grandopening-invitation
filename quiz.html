@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mahjong Challenge — The Crowd</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="quiz-page">
+      <section class="quiz-content">
+        <h1>Mahjong<br /><span>Challenge.</span></h1>
+
+        <p class="quiz-description">
+          Kenali tile-nya. Pecahkan tantangannya. Buka undangannya.
+        </p>
+
+        <div class="quiz-progress">
+          <span>QUESTION</span>
+          <span id="question-number">01 / 03</span>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="question-card">
+          <p class="question-category">MAHJONG BASICS</p>
+
+          <h2 id="question-text"></h2>
+
+          <div id="answer-options" class="answer-options">
+            <!-- Pilihan jawaban akan dibuat dengan JavaScript -->
+          </div>
+        </div>
+
+        <p id="quiz-feedback" class="quiz-feedback" aria-live="polite"></p>
+
+        <p class="quiz-footer">SOLVE THE QUIZ. UNLOCK THE INVITATION.</p>
+      </section>
+    </main>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>
