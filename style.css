@@ -427,11 +427,40 @@ button:hover {
     text-align: left;
     font-size: 13px;
     letter-spacing: 0;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+@media (hover: hover) and (pointer: fine) { 
+    .answer-option:hover {
+        background-color: #FFFFFF;
+        color: #12382f;
+        border-color: #FFFFFF;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .answer-option:hover {
+        background-color: transparent;
+        color: var(--cream);
+    }
+}
+
+.answer-option:focus,
+.answer-option:focus-visible,
+.answer-option:active {
+    background-color: transparent;
+    color: var(--cream);
+    outline: none;
+    box-shadow: none;
 }
 
 .answer-option.selected {
     border-color: var(--gold);
     background: var(--green-light);
+    color: var(--cream);
 }
 
 .quiz-feedback {

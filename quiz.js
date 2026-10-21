@@ -65,6 +65,14 @@ let locked = false;
 function showQuestion() {
     locked = false;
 
+    if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();  
+    }
+    answerOptions.querySelectorAll(".answer-option").forEach((button) => {
+        button.blur();
+        button.classList.remove("selected");
+    });
+
     const question = questions[currentQuestion];
 
     questionNumber.textContent =
